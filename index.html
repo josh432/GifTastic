@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GifTastic - Gif's Kids Want to Click</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<META NAME="Author" CONTENT="Joshua Silverman">
+	<META NAME="Designer" CONTENT="Joshua Silverman">
+	<META NAME="Game" CONTENT="Gifs Kids Like">
+	<META NAME="Language" CONTENT="English">
+	<META NAME="distribution" CONTENT="Local">
+	<META NAME="Robots" CONTENT="INDEX,FOLLOW">
+	<META NAME="zipcode" CONTENT="94523">
+	<META NAME="city" CONTENT="Pleasant Hill">
+	<META NAME="country" CONTENT="USA">
+
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="./assets/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+</head>
+
+<body>
+	<!-- Buttons holder -->
+	<div class="container">
+		<div class='buttons text-center'></div>
+	</div>
+<br><br><br>
+	<!-- Form for adding animals -->
+	<div class="holder">
+		<form>
+			<div class="form-group text-center">
+				<label class="control-label">What do kids like?</label>
+				<input type='text' class="form-control" id="kidsLike" placeholder="Animal, Toy, Cartoon, etc.">
+			</div>
+		</form>
+	</div>
+	<!-- Add submit button -->
+	<div class="submit-div">
+		<button type='submit' class="submit btn btn-primary" id="submit">Submit</button>
+	</div>
+	<br>
+	<!-- GIFs appear here -->
+	<div class='gifs'></div>
+<!-- JavaScript link -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="./assets/javascript.js"></script>
+</body>
+</html>

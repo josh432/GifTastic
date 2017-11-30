@@ -1,0 +1,25 @@
+/* Style Sheet for GifTastic */
+
+html,
+body,
+header, {
+    
+    height: 100%;
+
+}
+
+.container  {
+
+	font-family: 'Playfair Display', serif;
+}
+
+.holder {
+
+	font-family: 'Playfair Display', serif;
+
+}
+
+#submit {
+
+	font-family: 'Playfair Display', serif;
+}
