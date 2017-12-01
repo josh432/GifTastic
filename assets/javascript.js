@@ -50,7 +50,7 @@ $('.buttons').on('click', '.cartoon', function(){
 	var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + laugh + "&api_key=kw5CipqPFY5XTEW4RbN6T30CL3JC0woJ&limit=10";
 
 
-//Ajax call for specific movie being clicked
+//Ajax call for specific kid's interest being clicked
 
 $.ajax({
 	url: queryURL,
