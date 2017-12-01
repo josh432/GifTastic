@@ -42,6 +42,29 @@ $('#submit').on('click', function(event){
 
 });
 
+//add GIFS to gifs collection area
+
+$('.buttons').on('click', '.cartoon', function(){
+	$('.gifs').empty();
+	var laugh = $(this).attr('data-name');
+	var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + laugh + "&api_key=kw5CipqPFY5XTEW4RbN6T30CL3JC0woJ&limit=10";
+
+
+//Ajax call for specific movie being clicked
+
+$.ajax({
+	url: queryURL,
+	method: "GET"
+})
+.done(function(response){
+console.log(response);
+
+
+
+})
+})
+
+
 
 
 
