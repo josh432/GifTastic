@@ -57,12 +57,26 @@ $.ajax({
 	method: "GET"
 })
 .done(function(response){
-console.log(response);
+//console.log(response);
+
+	var results = response.data;
+	
+	for (var j = 0; j < results.length; j++) {
+
+		var gifDiv = $('<div class="item">');
+		var p = $('<p>');
+		$(p).html(results[j].rating);
+		var cartoonImage = $('<img>');
+		$(cartoonImage).attr('src', results[j].images.fixed_height.url);
+		$(gifDiv).append(p);
+		$(gifDiv).append(cartoonImage)
+		$('.gifs').prepend(gifDiv);
+	}
 
 
 
-})
-})
+	});
+});
 
 
 
