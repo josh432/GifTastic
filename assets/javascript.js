@@ -47,7 +47,7 @@ $('#submit').on('click', function(event){
 $('.buttons').on('click', '.cartoon', function(){
 	$('.gifs').empty();
 	var laugh = $(this).attr('data-name');
-	var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + laugh + "&api_key=kw5CipqPFY5XTEW4RbN6T30CL3JC0woJ&limit=10";
+	var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + laugh + "&api_key=kw5CipqPFY5XTEW4RbN6T30CL3JC0woJ&limit=12";
 
 
 //Ajax call for specific kid's interest being clicked
@@ -58,7 +58,7 @@ $.ajax({
 })
 .done(function(response){
 //console.log(response);
-
+//sets response as still pictures with fixed height. adds class for sizing.
 	var results = response.data;
 	
 	for (var j = 0; j < results.length; j++) {
@@ -67,7 +67,11 @@ $.ajax({
 		var p = $('<p>');
 		$(p).html(results[j].rating);
 		var cartoonImage = $('<img>');
-		$(cartoonImage).attr('src', results[j].images.fixed_height.url);
+		$(cartoonImage).attr('src', results[j].images.original_still.url);
+		$(cartoonImage).attr('data-still', results[j].images.original_still.url);
+		$(cartoonImage).attr('data-animate', results[j].images.fixed_height.url);
+		$(cartoonImage).attr('data-state', 'still');
+		$(cartoonImage).attr('class', 'gif');
 		$(gifDiv).append(p);
 		$(gifDiv).append(cartoonImage)
 		$('.gifs').prepend(gifDiv);
@@ -78,14 +82,18 @@ $.ajax({
 	});
 });
 
+//enables clickable gif play/stop functionality
+$(".gifs").on("click", '.gif', function() {
+var state = $(this).attr('data-state');
+
+ if (state === 'still') {
+ 	$(this).attr('src', $(this).attr('data-animate'));
+         $(this).attr('data-state', 'animate');
+        } else { 
+          $(this).attr('src', $(this).attr('data-still'));
+          $(this).attr('data-state', 'still');
 
 
-
-
-
-
-
-
-
-
-})
+ }
+	});
+});
