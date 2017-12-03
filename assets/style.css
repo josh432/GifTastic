@@ -8,6 +8,10 @@ header, {
 
 }
 
+body { background: url("./images/vintage-concrete.png") no-repeat;
+	  background-size: cover;
+}
+
 .container  {
 
 	font-family: 'Playfair Display', serif;
@@ -24,14 +28,33 @@ header, {
 	font-family: 'Playfair Display', serif;
 }
 
+button {
+
+	background-color: cadetblue;
+	color: white;
+	border-radius: 25px;
+
+}
+
+button:hover {
+
+	background-color: darkslategrey;
+}
+
 .item {
 	float: left;
 	padding-left:5px;
-	margin-left: 100px;
+	margin-left: 85px;
 	
 }
 
 .gif {
 	height: 300px;
-	width: 300px;
+	width: 300px; 
+	border: 2px solid cadetblue;
+}
+
+.gif:hover {
+	border: 5px solid darkslategrey;
+
 }
