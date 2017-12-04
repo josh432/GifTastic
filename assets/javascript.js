@@ -2,7 +2,7 @@
 
 $(document).ready(function(){
 	//Create array for giphy buttons//
-	var fun = ['pokemon', 'legos', 'ninjago', 'spongebob', 'barbie', 'superheros', 'transformers', 'disney movies', 'teen titans', 'wild kratts', 'dr. seuss', 'mickey mouse shorts'];
+	var fun = ['video games', 'legos', 'ninjago', 'spongebob', 'barbie', 'superheros', 'transformers', 'disney movies', 'teen titans', 'wild kratts', 'dr. seuss', 'mickey mouse shorts'];
 	//console.log(fun);
 
 	//Create initial buttons//

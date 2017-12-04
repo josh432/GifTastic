@@ -33,6 +33,14 @@ button {
 	background-color: cadetblue;
 	color: white;
 	border-radius: 25px;
+	box-shadow: 7px 7px 7px black;
+	padding: 10px;
+
+}
+
+.cartoon{
+
+	margin: 7px;
 
 }
 
@@ -41,20 +49,26 @@ button:hover {
 	background-color: darkslategrey;
 }
 
+label {
+
+font-size: 1.5em;
+
+}
+
 .item {
 	float: left;
 	padding-left:5px;
-	margin-left: 85px;
+	margin-left: 175px;
 	
 }
 
 .gif {
 	height: 300px;
 	width: 300px; 
-	border: 2px solid cadetblue;
+	border: 2px solid white;
 }
 
 .gif:hover {
-	border: 5px solid darkslategrey;
+	border: 5px solid red;
 
 }
