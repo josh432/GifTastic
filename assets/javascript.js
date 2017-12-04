@@ -1,6 +1,6 @@
 //Javascript for GifTastic//
 
-var click = new Audio ("./assets/images/Click.mp3");
+var click = new Audio ("./assets/images/click.mp3");
 
 $(document).ready(function(){
 	//Create array for giphy buttons//
