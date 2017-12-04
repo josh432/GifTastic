@@ -73,3 +73,11 @@ font-size: 1.5em;
 	border: 5px solid red;
 
 }
+
+@media screen and (max-width:509px){
+	.item {
+		margin-left: 10px;
+	}
+	
+
+}
