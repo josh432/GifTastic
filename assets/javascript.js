@@ -1,5 +1,7 @@
 //Javascript for GifTastic//
 
+var click = new Audio ("./assets/images/Click.mp3");
+
 $(document).ready(function(){
 	//Create array for giphy buttons//
 	var fun = ['video games', 'legos', 'ninjago', 'spongebob', 'barbie', 'superheros', 'transformers', 'disney movies', 'teen titans', 'wild kratts', 'dr. seuss', 'mickey mouse shorts', 'pokemon'];
@@ -29,7 +31,6 @@ $('#submit').on('click', function(event){
 	//var cartoon = $('#kidsLike').val().trim();
 	//fun.push(cartoon);
 	//$('#kidsLike').empty();
-
 	var cartoon = $("input[type='text']").val().trim();
     $("input[type='text']").val('');
     fun.push(cartoon);
@@ -38,6 +39,7 @@ $('#submit').on('click', function(event){
 
 
 	renderButtons();
+	click.play();
 
 
 });
@@ -48,7 +50,7 @@ $('.buttons').on('click', '.cartoon', function(){
 	$('.gifs').empty();
 	var laugh = $(this).attr('data-name');
 	var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + laugh + "&api_key=kw5CipqPFY5XTEW4RbN6T30CL3JC0woJ&limit=12";
-
+	click.play();
 
 //Ajax call for specific kid's interest being clicked
 
@@ -84,6 +86,7 @@ $.ajax({
 
 //enables clickable gif play/stop functionality
 $(".gifs").on("click", '.gif', function() {
+click.play();	
 var state = $(this).attr('data-state');
 
  if (state === 'still') {
